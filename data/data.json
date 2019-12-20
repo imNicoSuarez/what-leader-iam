@@ -1,0 +1,121 @@
+{
+    "qa":[
+      {
+        "question":"¿Cómo reaccionarías si una crisis cambiara un plan importante?",
+        "answers":[
+          {
+            "id":"A",
+            "text":"Instruyo a mi equipo a que atienda la emergencia. Yo sigo con el plan."
+          },
+          {
+            "id":"B",
+            "text":"Solvento yo mismo la crisis. Así me siento más cómodo."
+          },
+          {
+            "id":"C",
+            "text":"Armo un equipo para atender la crisis y sigo el plan a la par."
+          }
+        ]
+      },
+      {
+        "question":"¿Cómo actúas frente a un error de alguien de tu equipo?",
+        "answers":[
+          {
+            "id":"A",
+            "text":"Evalúo el impacto del error. Si no es nada grave, sigo adelante."
+          },
+          {
+            "id":"B",
+            "text":"Atiendo el problema de inmediato y sanciono al responsable."
+          },
+          {
+            "id":"C",
+            "text":"Un error no cambia la estrategia; a veces es una oportunidad."
+          }
+        ]
+      },
+      {
+        "question":"¿Cómo es tu relación con tus colaboradores?",
+        "answers":[
+          {
+            "id":"A",
+            "text":"Distante. El plan estratégico absorbe todo mi tiempo."
+          },
+          {
+            "id":"B",
+            "text":"Estrecha. Me involucro en el día a día de la operación."
+          },
+          {
+            "id":"C",
+            "text":"Me reúno seguido con los líderes de cada área."
+          }
+        ]
+      },
+      {
+        "question":"Tu equipo es...",
+        "answers":[
+          {
+            "id":"A",
+            "text":"Personas que motivo para impulsar su crecimiento."
+          },
+          {
+            "id":"B",
+            "text":"Gente que debe encargarse de cerrar a tiempo los proyectos."
+          },
+          {
+            "id":"C",
+            "text":"Talento que fortalece el crecimiento de la organización."
+          }
+        ]
+      },
+      {
+        "question":"¿Con qué frase te identificas?",
+        "answers":[
+          {
+            "id":"A",
+            "text":"\"El business manager es mi mano derecha\"."
+          },
+          {
+            "id":"B",
+            "text":"\"Para que las cosas salgan bien, uno mismo debe encargarse de hacerlas\"."
+          },
+          {
+            "id":"C",
+            "text":"\"Retengo al talento y trabajo en mejorar sus competencias\"."
+          }
+        ]
+      },
+      {
+        "question":"La lancha en la que vas se hunde y consigues un salvavidas. ¿Qué haces?",
+        "answers":[
+          {
+            "id":"A",
+            "text":"Nadar. Es mejor que morir en el intento."
+          },
+          {
+            "id":"B",
+            "text":"Mantenerme a flote como pueda"
+          },
+          {
+            "id":"C",
+            "text":"Mirar hacia los lados en busca de tierra"
+          }
+        ]
+      }
+    ],
+    "profiles":[
+      {
+        "code":"AAAAAA",
+        "profileFem":{
+                    "name":"Oprah Winfrey", 
+                    "image":"m12.jpg",
+                    "gender":"F"
+                  },
+        "profileMen":{
+                   "name":"Steve Job", 
+                   "image":"sjob.png",
+                   "gender":"M"
+                   }
+      }
+    ]
+  }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<
+<html>
+    <head>
+        <title>Your profile Business</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="spreadsheets/style.css">
+        
+    </head>
+    <body>
+        <div class="c-container js-question-screen"></div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+        <script src="javascript/app.js"></script>
+
+        <script id='q-and-a' type='text/html'>
+            <div class="js-question c-q-container"> <%= question %></div>
+            
+            <% for (let index = 0; index < answers.length; index++) { %>
+                <a href="#" class="js-answer c-a-container" data-option-answer="<%= answers[index].id %>">
+                    <span class="c-letter"><%= answers[index].id %></span>
+                    <span class="c-text"><%= answers[index].text %></span>
+                </a>
+            <% }; %>
+        </script>
+        <script id='button-analisis' type='text/html'>
+            <a href="#" class="c-button-start" id="show-profile">Ver qué líder soy</a> 
+        </script>
+        <script id='gender-selector' type='text/html'>
+            <a href="#" class="c-button-start js-gender-selector" data-gender="F">Soy Mujer</a> 
+            <a href="#" class="c-button-start js-gender-selector"  data-gender="M">Soy Hombre</a> 
+        </script>
+
+        <script id='profile-template' type='text/html'>
+            <div class='img-container'>
+                <img class="c-img-profile" src="/images/<%= profile.image %>"/>
+                <div class="c-name-profile"><%= profile.name %></div>
+            </div>
+            <a href="#" class="c-button-start" id="finish">Finalizar</a> 
+        </script>
+
+        <script id='start-template' type='text/html'>
+            <a href="#" class="c-button-start" id="start">Comenzar</a> 
+        </script>
+
+    </body>
+</html>
