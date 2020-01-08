@@ -2,7 +2,9 @@ html, body {
     height:100%; 
     margin:0;
     background: #13182c;
-    font-family: 'Montserrat', sans-serif;;}
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+  }
 
 .c-container{
   height: 100%;
@@ -106,7 +108,7 @@ html, body {
   }
 
   .c-img-profile{
-    width: 45vh;
+    width: 38vh;
   }
   .c-name-profile{
     height: 8vh;
@@ -209,4 +211,8 @@ html, body {
 
   .u-separete{
     margin-top: 14vh;
+  }
+
+  #finish{
+    text-decoration: none;
   }

@@ -56,6 +56,11 @@ $(document).ready(function(){
                         } else {
                             $(".js-question-screen").html(loadTemplate("#profile-template",{profile:_.sample(element.profileMen)}));
                         }  
+                        anime({
+                            targets: '.c-img-profile',
+                            rotateY: 360,
+                            duration: 5000
+                        });
                     }
                 }
             },
@@ -83,9 +88,28 @@ var getdata = function(){
                 var compiledTemplate = _.template(templateSelector);
                 var templateResult = compiledTemplate(arry[CURRENT_STEP]);
                 $(".js-question-screen").html(templateResult);
+                anime({
+                    targets: '.js-answer',
+                    translateY: 50,
+                    opacity: 0,
+                    direction: 'reverse',
+                    delay: function(el, i, l) {
+                      return i * 100;
+                    },
+                    easing: 'easeInCubic'
+                  });
+
                 CURRENT_STEP=CURRENT_STEP+1;
             } else {
                 $(".js-question-screen").html( $("#button-analisis").html());
+                anime({
+                    targets: '#show-profile',
+                    scale: 1.1,
+                    rotate: '10deg',
+                    direction: 'alternate',
+                    loop: true,
+                    easing: 'easeInOutSine'
+                  });
             }
        
         },
@@ -131,3 +155,5 @@ var getCode = function(arry){
    
    return "C"
 }
+
+
