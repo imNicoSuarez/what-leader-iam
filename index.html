@@ -9,7 +9,7 @@
         <meta name="author" content="John Doe">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="spreadsheets/style.css">
         
     </head>
@@ -23,32 +23,43 @@
 
         <script id='q-and-a' type='text/html'>
             <div class="js-question c-q-container"> <%= question %></div>
-            
+            <div class="u-separete"></div>
             <% for (let index = 0; index < answers.length; index++) { %>
                 <a href="#" class="js-answer c-a-container" data-option-answer="<%= answers[index].id %>">
                     <span class="c-letter"><%= answers[index].id %></span>
                     <span class="c-text"><%= answers[index].text %></span>
                 </a>
             <% }; %>
+
+            <img src="images/logo.svg" class='c-small-logo'/>  
         </script>
         <script id='button-analisis' type='text/html'>
-            <a href="#" class="c-button-start" id="show-profile">Ver qué líder soy</a> 
+            <a href="#" class="c-button-circle u-lines" id="show-profile">DESCUBRIR</a> 
+            <img src="images/logo.svg" class='c-small-logo'/>  
         </script>
         <script id='gender-selector' type='text/html'>
-            <a href="#" class="c-button-start js-gender-selector" data-gender="F">Soy Mujer</a> 
-            <a href="#" class="c-button-start js-gender-selector"  data-gender="M">Soy Hombre</a> 
+            <img src="images/logo.svg" class='c-big-logo'/>  
+            <a href="#" class="c-button-start js-gender-selector"  style="margin-top: 27vh;" data-gender="F">Mujer</a> 
+            <a href="#" class="c-button-start js-gender-selector"  data-gender="M">Hombre</a> 
         </script>
 
         <script id='profile-template' type='text/html'>
-            <div class='img-container'>
-                <img class="c-img-profile" src="images/<%= profile.image %>"/>
-                <div class="c-name-profile"><%= profile.name %></div>
-            </div>
-            <a href="#" class="c-button-start" id="finish">Finalizar</a> 
+            <a href="#" id="finish">
+                <div class='img-container'>
+                    <div class='u-lines' style="margin-bottom: 5vh;">
+                        <img class="c-img-profile " src="images/<%= profile.image %>"/>
+                    </div>
+                    <div class="c-name-profile"><%= profile.name %></div>
+                    <div class="c-description-profile"><%= profile.description %></div>
+                </div>
+           </a> 
+           <img src="images/logo.svg" class='c-small-logo'/>  
         </script>
 
         <script id='start-template' type='text/html'>
-            <a href="#" class="c-button-start" id="start">Comenzar</a> 
+            <img src="images/logo.svg" class='c-big-logo'/>   
+            <h1 class='u-header-1'>CONOCÉ <br/> QUÉ CLASE<br/> DE LÍDER<br/> SOS</h1>       
+             <a href="#" class="c-button-start" id="start">Comenzar</a> 
         </script>
 
     </body>

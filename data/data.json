@@ -105,17 +105,82 @@
     ],
     "profiles":[
       {
-        "code":"AAAAAA",
-        "profileFem":{
-                    "name":"Oprah Winfrey", 
-                    "image":"m12.jpg",
+        "code":"A",
+        "profileFem":[{
+                    "name":"MICHELLE OBAMA", 
+                    "image":"people/MICHELLE-OBAMA.svg",
+                    "description": "Nada escapa a tu mirada estratégica. No eres la sombra de nadie:tu astro brilla con luz propia.",
                     "gender":"F"
                   },
-        "profileMen":{
-                   "name":"Steve Job", 
-                   "image":"sjob.png",
+                  {
+                    "name":"MELINDA GATES", 
+                    "image":"people/MELINDA-GATES.svg",
+                    "description": "No hay límites para tu mirada empresarial. Ves más allá de lo que se te muestra. Te preocupa y te ocupa el futuro lejano.",
+                    "gender":"F"
+                  }],
+        "profileMen":[{
+                   "name":"ELON MUSK", 
+                   "image":"people/ELON-MUSK.svg",
+                   "description": "Un visionario un poco loco, como corresponde a todo genio.",
                    "gender":"M"
-                   }
+                   },{
+                    "name":"MICHIO KAKU", 
+                    "image":"people/MICHIO-KAKU.svg",
+                    "description": "El futuro y las tendencias forman parte de tu liderazgo cotidiano. ¡Nada escapa a tus planes!",
+                    "gender":"M"
+                    }]
+      },
+      {
+        "code":"B",
+        "profileFem":[{
+                    "name":"LADY DI", 
+                    "image":"people/LADY-DI.svg",
+                    "description": "Te involucras directamente en aquello que crees beneficioso para tu empresa. ¡Le pones el cuerpo a las decisiones!",
+                    "gender":"F"
+                  },
+                  {
+                    "name":"COCO CHANEL", 
+                    "image":"people/COCO-CHANEL.svg",
+                    "description": "Rupturista, tu estilo de conducción -muy cerca de los problemas y más cerca aún de las soluciones- puede llevarte al éxito sin escalas.",
+                    "gender":"F"
+                  }],
+        "profileMen":[{
+                   "name":"RAY KURZWEIL", 
+                   "image":"people/RAY-KURZWEIL.svg",
+                   "description": "El futuro ya llegó para ti. Cuando todos se agarran la cabeza, eres capaz de inventar una solución maravillosa.",
+                   "gender":"M"
+                   },{
+                    "name":"MARCOS GALPERIN", 
+                    "image":"people/MARCOS-GALPERIN.svg",
+                    "description": "Tienes claro que no existe una empresa sin una dosis de riesgo. Estás dispuesto a asumir con coraje y perseverancia la conducción de tu negocio.",
+                    "gender":"M"
+                    }]
+      },
+      {
+        "code":"C",
+        "profileFem":[{
+                    "name":"JANE FONDA", 
+                    "image":"people/JANE-FONDA.svg",
+                    "description": "Tienes talento artístico, sensibilidad y hasta irías a la cárcel por defender lo que piensas ;)",
+                    "gender":"F"
+                  },
+                  {
+                    "name":"ANGELA MERKE", 
+                    "image":"people/ANGELA-MERKE.svg",
+                    "description": "Generas certezas a tu alrededor, clave para mantenerte en el tiempo y generar equipos de relevo.",
+                    "gender":"F"
+                  }],
+        "profileMen":[{
+                   "name":"STEVE JOBS", 
+                   "image":"people/STEVE-JOBS.svg",
+                   "description": "Estás dispuesto a defender hasta el final aquello que crees. Miras lejos y generas confianza en tus equipos.",
+                   "gender":"M"
+                   },{
+                    "name":"CARLOS SLIM", 
+                    "image":"people/CARLOS-SLIM.svg",
+                    "description": "La ingeniería de tu negocio es fundamental para la sustentabilidad de las estrategias que te planteas.",
+                    "gender":"M"
+                    }]
       }
     ]
   }

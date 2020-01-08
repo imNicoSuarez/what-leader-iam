@@ -38,7 +38,9 @@ $(document).ready(function(){
 
     $('.js-question-screen').on("click", 'a#show-profile', function(e){
         e.preventDefault();
-        const codeProfile = CURRENT_ANSWERS.join("").toUpperCase();
+        const codeProfile = getCode(CURRENT_ANSWERS).toUpperCase();
+
+        console.log("Code----->"+codeProfile)
         $.ajax({
             url: 'data/data.json',
             dataType: 'json',
@@ -50,9 +52,9 @@ $(document).ready(function(){
                     if(element.code==codeProfile){
                         console.log(CURRENT_GENDER)
                         if (CURRENT_GENDER == "F"){
-                            $(".js-question-screen").html(loadTemplate("#profile-template",{profile: element.profileFem}));
+                            $(".js-question-screen").html(loadTemplate("#profile-template",{profile: _.sample(element.profileFem)}));
                         } else {
-                            $(".js-question-screen").html(loadTemplate("#profile-template",{profile:element.profileMen}));
+                            $(".js-question-screen").html(loadTemplate("#profile-template",{profile:_.sample(element.profileMen)}));
                         }  
                     }
                 }
@@ -79,12 +81,9 @@ var getdata = function(){
             if (arry.length > CURRENT_STEP){
                 var templateSelector =  $("#q-and-a").html();
                 var compiledTemplate = _.template(templateSelector);
-                console.log(arry[CURRENT_STEP]);
-                console.log(arry.length)
                 var templateResult = compiledTemplate(arry[CURRENT_STEP]);
                 $(".js-question-screen").html(templateResult);
                 CURRENT_STEP=CURRENT_STEP+1;
-                console.log('CURRENT STEP: '+CURRENT_STEP);
             } else {
                 $(".js-question-screen").html( $("#button-analisis").html());
             }
@@ -104,13 +103,31 @@ var loadTemplate = function(templateId,  data ) {
         var value = data;
     }
 
-    console.log('PASA 1')
     var templateSelector =  $(templateId).html();
-    console.log('PASA 2')
     var compiledTemplate = _.template(templateSelector);
-    console.log('PASA 3')
     var templateResult = compiledTemplate(value);
-    console.log('PASA 4'+templateResult)
 
     return templateResult;
+}
+
+var getCode = function(arry){
+
+    var A = 0;
+    var B = 0;
+    var C = 0;
+
+    for (let index = 0; index < arry.length; index++) {
+        if(arry[index]== "A"){
+            A = A+1;
+        } else if(arry[index]== "B"){
+            B = B+1;
+        } else {
+            C = C+1;
+        }
+    }
+
+   if ( A > B && A > C) { return "A"}
+   if ( B > A && B > C) { return "B"}   
+   
+   return "C"
 }
